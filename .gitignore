@@ -1,0 +1,25 @@
+# Build output
+build/
+
+# SDK configuration backups
+sdkconfig.old
+sdkconfig.defaults*
+
+# Managed components
+managed_components/
+dependencies*/
+esp_idf_*/
+
+# IDE settings
+.vscode/
+.devcontainer/
+
+# Python cache & test files
+__pycache__/
+*.py[cod]
+*.pytest_cache/
+pytest*
+
+# System files
+.DS_Store
+Thumbs.db
