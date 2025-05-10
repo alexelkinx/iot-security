@@ -19,13 +19,15 @@ This repository contains practical labs and configuration files for the **IoT Se
 1. [Lab 1: Environment Setup](lab-01-environment-setup/README.md)  
    Set up the secure testing environment including EdgeRouter X, Raspberry Pi with Docker-based IoT stack, and ESP32 MQTT example.
 
+2. [Lab 2: Network Scanning and Recon](lab-02-network-scanning-and-recon/README.md)  
+   Capture ARP and TCP traffic, scan the local network with Nmap, and identify weaknesses using OpenVAS and other Kali Linux tools.
+
 ## Requirements
 
 - Raspberry Pi 4 (with 64-bit OS)
 - ESP32-C6 or similar development board
 - EdgeRouter X
 - Kali Linux VM (VirtualBox or VMware)
-- Ethernet cables and breadboard (for hardware connections)
 
 ---
 

@@ -1,0 +1,48 @@
+nwdiag {
+  group {
+    color = "#CCFFCC";
+    description = "System under reconnaissance"
+    EdgeRouterX;
+    RaspberryPi;
+    ESP32;
+    Grafana;
+    InfluxDB;
+    NodeRED;
+    Mosquitto;
+  }
+
+  Internet [shape=cloud]
+  Internet -- LabRouter
+
+  network EmboLab {
+    address = "172.27.224.0/20"
+    LabRouter [address = "172.27.224.1"]
+    EdgeRouterX [address = "172.27.224.x"]
+    color = red
+  }
+
+  network LAN {
+    address = "192.168.1.0/24"
+    color = palegreen
+
+    EdgeRouterX [address = "192.168.1.1", description = "EdgeRouter X (Firewall/Router)\nPorts: 22 (SSH), 53 (DNS), 80 (HTTP), 443 (HTTPS), 10001 (Discovery)"]
+
+    Host_Laptop [address = "192.168.1.38", description = "Host Laptop\nPorts: 80 (HTTP), 5000 (RTSP), 7000 (RTSP)"]
+    KaliVM [address = "192.168.1.41", description = "Kali VM (bridge mode)\nGreenbone GVM scanner"]
+
+    RaspberryPi [address = "192.168.1.40", description = "Raspberry Pi\nDocker Host\nWiFi AP+DHCP\nNAT to LAN\nPorts: 22 (SSH), 5900 (VNC)"]
+    Grafana [address = "192.168.1.10", description = "Grafana container\nPorts: 3000 (Web UI)"]
+    InfluxDB [address = "192.168.1.11", description = "InfluxDB container\nPorts: 8086 (API)"]
+    NodeRED [address = "192.168.1.12", description = "Node-RED container\nPorts: 1880 (Web UI)"]
+    Mosquitto [address = "192.168.1.13", description = "Mosquitto container\nPorts: 1883 (MQTT)"]
+  }
+
+  network WIFI {
+    address = "192.168.99.0/24"
+    color=palegreen
+
+    RaspberryPi [address = "192.168.99.10"]
+    ESP32 [address = "192.168.99.171",description="ESP32:\nWiFi client\nMQTT publisher"]
+  }
+}
+@enduml

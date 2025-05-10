@@ -1,0 +1,61 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-02 16:56 EEST
+Nmap scan report for 192.168.1.1
+Host is up (0.00051s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE SERVICE
+22/tcp    open  ssh
+53/tcp    open  domain
+80/tcp    open  http
+443/tcp   open  https
+10001/tcp open  scp-config
+MAC Address: 70:A7:41:DE:33:6B (Ubiquiti)
+
+Nmap scan report for 192.168.1.10
+Host is up (0.00064s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE
+3000/tcp open  ppp
+MAC Address: 6E:8A:5F:FC:AC:9D (Unknown)
+
+Nmap scan report for 192.168.1.11
+Host is up (0.00067s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE
+8086/tcp open  d-s-n
+MAC Address: 86:6F:25:63:4F:1C (Unknown)
+
+Nmap scan report for 192.168.1.12
+Host is up (0.00065s latency).
+All 1000 scanned ports on 192.168.1.12 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 52:8D:BB:BB:9D:C5 (Unknown)
+
+Nmap scan report for 192.168.1.13
+Host is up (0.00076s latency).
+All 1000 scanned ports on 192.168.1.13 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 3E:B7:7B:82:5F:F3 (Unknown)
+
+Nmap scan report for 192.168.1.38
+Host is up (0.000051s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+5000/tcp open  upnp
+7000/tcp open  afs3-fileserver
+MAC Address: 4C:EA:41:66:29:A2 (Gopod Group Limited)
+
+Nmap scan report for 192.168.1.40
+Host is up (0.00046s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+5900/tcp open  vnc
+MAC Address: DC:A6:32:20:53:D9 (Raspberry Pi Trading)
+
+Nmap scan report for 192.168.1.41
+Host is up (0.0000010s latency).
+All 1000 scanned ports on 192.168.1.41 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (8 hosts up) scanned in 2.36 seconds

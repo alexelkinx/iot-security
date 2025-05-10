@@ -1,0 +1,160 @@
+IP,Hostname,Port,Port Protocol,CVSS,Severity,QoD,Solution Type,NVT Name,Summary,Specific Result,NVT OID,CVEs,Task ID,Task Name,Timestamp,Result ID,Impact,Solution,Affected Software/OS,Vulnerability Insight,Vulnerability Detection Method,Product Detection Result,BIDs,CERTs,Other References
+      192.168.1.1,,,,10.0,High,80,"Mitigation","Operating System (OS) End of Life (EOL) Detection","The Operating System (OS) on the remote host has reached the end
+  of life (EOL) and should not be used anymore.","The ""Debian GNU/Linux"" Operating System on the remote host has reached the end of life.
+
+CPE:               cpe:/o:debian:debian_linux:9
+Installed version,
+build or SP:       9
+EOL date:          2022-06-30
+EOL info:          https://en.wikipedia.org/wiki/List_of_Debian_releases#Release_table
+",1.3.6.1.4.1.25623.1.0.103674,"",260e9bfa-3243-45b8-bdcc-cee9f3ee35c4,"Immediate scan of IP 192.168.1.1",2025-04-04T10:44:53Z,25422e5e-3425-48d8-8e16-da8eb5287efb,"An EOL version of an OS is not receiving any security updates
+  from the vendor. Unfixed security vulnerabilities might be leveraged by an attacker to compromise
+  the security of this host.","Upgrade the OS on the remote host to a version which is still
+  supported and receiving security updates by the vendor.","","","Checks if an EOL version of an OS is present on the target
+  host.
+Details:
+Operating System (OS) End of Life (EOL) Detection
+(OID: 1.3.6.1.4.1.25623.1.0.103674)
+Version used: 2024-02-28T14:37:42Z
+","Product: cpe:/o:debian:debian_linux:9
+Method: OS Detection Consolidation and Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.105937)
+","","",""
+192.168.1.1,,22,tcp,9.8,High,95,"Mitigation","SSH Brute Force Logins With Default Credentials Reporting","It was possible to login into the remote SSH server using
+  default credentials.","It was possible to login with the following credentials <User>:<Password>
+
+ubnt:ubnt
+",1.3.6.1.4.1.25623.1.0.103239,"CVE-1999-0501,CVE-1999-0502,CVE-1999-0507,CVE-1999-0508,CVE-2005-1379,CVE-2006-5288,CVE-2009-3710,CVE-2012-4577,CVE-2016-1000245,CVE-2017-16523,CVE-2020-29583,CVE-2020-9473,CVE-2023-1944,CVE-2024-22902,CVE-2024-31970,CVE-2024-46328",260e9bfa-3243-45b8-bdcc-cee9f3ee35c4,"Immediate scan of IP 192.168.1.1",2025-04-04T10:44:53Z,1350936c-caee-4f32-aeff-f6c20afdf36e,"This issue may be exploited by a remote attacker to e.g. gain
+  access to sensitive information or modify system configuration.","Change the password as soon as possible.","The following products are known to use the default credentials
+  checked by the VT 'SSH Brute Force Logins With Default Credentials' (OID:
+  1.3.6.1.4.1.25623.1.0.108013) used for this reporting:
+
+  - CVE-2017-16523: MitraStar GPT-2541GNAC (HGU) 1.00(VNJ0)b1 and DSL-100HN-T1 ES_113WJY0b16 devices
+
+  - CVE-2020-29583: Zyxel Firewall / AP Controller
+
+  - CVE-2020-9473: S. Siedle & Soehne SG 150-0 Smart Gateway before 1.2.4
+
+  - CVE-2023-1944: minikube 1.29.0 and probably prior
+
+  - CVE-2024-22902: Vinchin Backup & Recovery
+
+  - CVE-2024-31970: AdTran SRG 834-5 HDC17600021F1 devices (with SmartOS 11.1.1.1) during a window
+  of time when the device is being set up
+
+  - CVE-2024-46328: VONETS VAP11G-300 v3.3.23.6.9
+
+  - Various additional products like e.g. Ubiquiti EdgeMax / EdgeRouter, Crestron AM-100 and similar
+  for which no CVE was assigned (See 'default_credentials.inc' file on the file system for a full
+  list)
+
+  Other products might be affected as well.","As the VT 'SSH Brute Force Logins With Default Credentials'
+  (OID: 1.3.6.1.4.1.25623.1.0.108013) might run into a timeout the actual reporting of this
+  vulnerability takes place in this VT instead.","Reports default credentials detected by the VT
+  'SSH Brute Force Logins With Default Credentials' (OID: 1.3.6.1.4.1.25623.1.0.108013).
+Details:
+SSH Brute Force Logins With Default Credentials Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.103239)
+Version used: 2025-03-28T15:41:52Z
+","","","",""
+192.168.1.1,,443,tcp,5.0,Medium,99,"Mitigation","SSL/TLS: Certificate Expired","The remote server's SSL/TLS certificate has already expired.","The certificate of the remote service expired on 2017-04-03 22:00:33.
+
+Certificate details:
+fingerprint (SHA-1)             | 9D8042350814DA84FB8AFE0D644055261C9FE909
+fingerprint (SHA-256)           | 9741C84CEF9BE82E0B2D3A7696641CCDA04A94925C5D86000670474C8DD1DB0A
+issued by                       | L=New York,ST=New York,O=Ubiquiti Inc.,CN=UbiquitiRouterUI,C=US
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 0B7B133F0F528A1985D324CF94E71D6872399FBC
+signature algorithm             | sha256WithRSAEncryption
+subject                         | L=New York,ST=New York,O=Ubiquiti Inc.,CN=UbiquitiRouterUI,C=US
+subject alternative names (SAN) | UbiquitiRouterUI
+valid from                      | 2014-12-31 22:00:33 UTC
+valid until                     | 2017-04-03 22:00:33 UTC
+",1.3.6.1.4.1.25623.1.0.103955,"",260e9bfa-3243-45b8-bdcc-cee9f3ee35c4,"Immediate scan of IP 192.168.1.1",2025-04-04T10:44:53Z,8861e234-ef51-4ff0-8445-ea0e131f8d2d,"","Replace the SSL/TLS certificate by a new one.","","This script checks expiry dates of certificates associated with
+  SSL/TLS-enabled services on the target and reports whether any have already expired.","
+Details:
+SSL/TLS: Certificate Expired
+(OID: 1.3.6.1.4.1.25623.1.0.103955)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+","","",""
+192.168.1.1,,,,2.6,Low,80,"Mitigation","TCP Timestamps Information Disclosure","The remote host implements TCP timestamps and therefore allows
+  to compute the uptime.","It was detected that the host implements RFC1323/RFC7323.
+
+The following timestamps were retrieved with a delay of 1 seconds in-between:
+Packet 1: 3226031243
+Packet 2: 3226032303
+",1.3.6.1.4.1.25623.1.0.80091,"",260e9bfa-3243-45b8-bdcc-cee9f3ee35c4,"Immediate scan of IP 192.168.1.1",2025-04-04T10:44:53Z,7e45fe09-f2f4-4cf8-9e3d-398d806e09bd,"A side effect of this feature is that the uptime of the remote
+  host can sometimes be computed.","To disable TCP timestamps on linux add the line
+  'net.ipv4.tcp_timestamps = 0' to /etc/sysctl.conf. Execute 'sysctl -p' to apply the settings at
+  runtime.
+
+  To disable TCP timestamps on Windows execute 'netsh int tcp set global timestamps=disabled'
+
+  Starting with Windows Server 2008 and Vista, the timestamp can not be completely disabled.
+
+  The default behavior of the TCP/IP stack on this Systems is to not use the Timestamp options when
+  initiating TCP connections, but use them if the TCP peer that is initiating communication includes
+  them in their synchronize (SYN) segment.
+
+  See the references for more information.","TCP implementations that implement RFC1323/RFC7323.","The remote host implements TCP timestamps, as defined by
+  RFC1323/RFC7323.","Special IP packets are forged and sent with a little delay in
+  between to the target IP. The responses are searched for a timestamps. If found, the timestamps
+  are reported.
+Details:
+TCP Timestamps Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.80091)
+Version used: 2023-12-15T16:10:08Z
+","","","",""
+192.168.1.1,,22,tcp,2.6,Low,80,"Mitigation","Weak MAC Algorithm(s) Supported (SSH)","The remote SSH server is configured to allow / support weak MAC
+  algorithm(s).","The remote SSH server supports the following weak client-to-server MAC algorithm(s):
+
+umac-64-etm@openssh.com
+umac-64@openssh.com
+
+
+The remote SSH server supports the following weak server-to-client MAC algorithm(s):
+
+umac-64-etm@openssh.com
+umac-64@openssh.com
+",1.3.6.1.4.1.25623.1.0.105610,"",260e9bfa-3243-45b8-bdcc-cee9f3ee35c4,"Immediate scan of IP 192.168.1.1",2025-04-04T10:44:53Z,b2779f95-1a98-44da-a69d-40748ef043d8,"","Disable the reported weak MAC algorithm(s).","","","Checks the supported MAC algorithms (client-to-server and
+  server-to-client) of the remote SSH server.
+
+  Currently weak MAC algorithms are defined as the following:
+
+  - MD5 based algorithms
+
+  - 96-bit based algorithms
+
+  - 64-bit based algorithms
+
+  - 'none' algorithm
+Details:
+Weak MAC Algorithm(s) Supported (SSH)
+(OID: 1.3.6.1.4.1.25623.1.0.105610)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:secure_shell_protocol
+Method: SSH Protocol Algorithms Supported
+(OID: 1.3.6.1.4.1.25623.1.0.105565)
+","","",""
+192.168.1.1,,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",260e9bfa-3243-45b8-bdcc-cee9f3ee35c4,"Immediate scan of IP 192.168.1.1",2025-04-04T10:44:53Z,160f31e8-4f2e-4e10-904a-0c2b96871cb1,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
