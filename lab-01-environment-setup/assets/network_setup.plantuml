@@ -1,0 +1,36 @@
+@startuml
+nwdiag {
+   group {
+    color = "#CCFFCC";
+    description = "system under attack"
+    EdgeRouterX;
+    RaspberryPi;
+    ESP32;
+  }
+  
+  Internet [shape=cloud]
+  Internet -- LabRouter
+  network EmboLab {
+    address = "172.27.224.0/20"
+    LabRouter [address = "172.27.224.1"]
+    EdgeRouterX [address = "172.27.224.x"]
+    color=red
+  }
+  network your_LAN {
+    color=palegreen
+    address = "10.1.1.0/24"
+    EdgeRouterX [address = "10.1.1.1"]
+    RaspberryPi [address = "10.1.1.38"]
+    Windows_laptop [address = "10.1.1.39"]
+    KaliVM [address = "10.1.1.40",description="Attacker KaliVM\nBridged to your_LAN\nUSB wifi to your_WIFI"]
+  }
+
+  network your_WIFI {
+    color=palegreen
+    address = "192.168.99.0/24"
+    RaspberryPi [address = "192.168.99.10",description="RaspberryPi\nWiFi AP+DHCP\nNAT to LAN"]
+    ESP32 [address = "192.168.99.50"]
+    KaliVM [address = "192.168.99.51"]
+  }
+}
+@enduml
