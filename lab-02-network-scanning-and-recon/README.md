@@ -29,7 +29,7 @@ The lab includes the following files:
 - `mqtt_tcp/`: ESP32 project publishing MQTT messages to the broker
 - `mqtt-capture.md`: Captured MQTT message from `tcpdump`
 - `tcp-syn-packet.md`: Hex dump of TCP SYN packet from Wireshark
-- `arp_tables.md`: ARP table snapshots from devices
+- `arp-tables.md`: ARP table snapshots from devices
 - `nmap-basic-scan.txt`, `nmap-full-scan.txt`: Results from basic and full Nmap scans
 - `nmap-weakness-analysis.md`: AI-assisted analysis of Nmap scan
 - `openvas-report-*.csv`: Vulnerability scan reports from OpenVAS
