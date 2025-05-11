@@ -21,7 +21,7 @@ c:\> arp -a
 
 Log into raspberrypi and check what are neighbour MACs it has learned.
 In raspberrypi, open a terminal into mosquitto container and check what are its learned neighbour MACs. (Use `docker exec -it <containername> <clicommand>` )
-Save results to to your repo as `arp_tables.md`
+Save results to to your repo as `arp-tables.md`
 
 ## 2. IP packet capture
 
