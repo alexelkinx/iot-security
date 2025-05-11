@@ -22,6 +22,9 @@ This repository contains practical labs and configuration files for the **IoT Se
 2. [Lab 2: Network Scanning and Recon](lab-02-network-scanning-and-recon/README.md)  
    Capture ARP and TCP traffic, scan the local network with Nmap, and identify weaknesses using OpenVAS and other Kali Linux tools.
 
+3. [Lab 3: MQTT MITM and Packet Modification](lab-03-mqtt-mitm/README.md)  
+   Perform a Man-in-the-Middle (MITM) attack on MQTT traffic, analyze message flows, and modify published data using ettercap and bettercap tools.
+
 ## Requirements
 
 - Raspberry Pi 4 (with 64-bit OS)
