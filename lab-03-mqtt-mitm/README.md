@@ -20,8 +20,8 @@ The task description can be found in the [task-description.md](task-description.
 
 The lab includes:
 
-- `normal_mqtt_flow.md`: Sequence diagram of the normal MQTT message path
-- `mitm_mqtt_flow.md`: Modified diagram showing MITM interception and message routing
+- `normal-mqtt-flow.md`: Sequence diagram of the normal MQTT message path
+- `mitm-mqtt-flow.md`: Modified diagram showing MITM interception and message routing
 - `replace.js`: JavaScript filter used by Bettercap to modify MQTT payload content
 - `mqtt_tcp/`: ESP-IDF project with MQTT publisher setup for use in the attack
 

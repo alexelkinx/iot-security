@@ -25,7 +25,7 @@ To obtain the data,
 - raspi eth0 traffic similarly: `sudo tcpdump -e -i eth0 tcp port 1883`
 - broker traffic: `docker exec -it mosquitto tcpdump -e -i eth0 tcp port 1883`
   '
-  Update the diagram and submit to your repo as `normal_mqtt_flow.md`
+  Update the diagram and submit to your repo as `normal-mqtt-flow.md`
 
 ```mermaid
 sequenceDiagram
@@ -54,7 +54,7 @@ sequenceDiagram
    b) If you are listening to wildcard traffic in terminal, you see those packets sent to your kali vm IP address. Next, **stop the mosquitto_sub command** and restart wirteshark capture to get clean display.
    c) To find out who (what IP addresses) are mqtt clients, you'll tell to all devices in network that broker IP belongs to kali MAC. So all mqtt clients' messages will appear in kali port 1883. - mqtt client sends ethernet frame (containing IP packet (containing MQTT publish message)) to destination MAC address. Because of ARP poisoning, that destination MAC is kali MAC. - kali receives the packet (as shown in wireshark capture), and forwards it to original broker MAC address. The frame contains original IP addresses and mqtt content.
    Start MITM attack with `sudo ettercap -T -M arp:remote /192.168.1.13// ///` (replace IP with your mosquitto container IP). Check kali wireshark: You can now see MQTT messages and sender IP, right?
-   d) Document the current the setup as `mitm_mqtt_flow.md` : Add node kali in the interception point, and add + change the necessary message frame addresses according to this MITM setup.
+   d) Document the current the setup as `mitm-mqtt-flow.md` : Add node kali in the interception point, and add + change the necessary message frame addresses according to this MITM setup.
    e) Stop the ettercap MITM with ctrl-C.
 
 ### 1.4 Modifying the data frames sent by ESP
