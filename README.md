@@ -13,6 +13,8 @@ This repository contains practical labs and configuration files for the **IoT Se
 - Full IoT stack deployment using MQTT, InfluxDB, Node-RED, and Grafana
 - Vulnerability scanning with Kali Linux and OpenVAS
 - Secure firmware development for ESP32 devices
+- Attacks on IoT protocols: MITM on MQTT
+- Exploiting memory vulnerabilities: buffer overflow on embedded systems
 
 ## Labs
 
@@ -24,6 +26,9 @@ This repository contains practical labs and configuration files for the **IoT Se
 
 3. [Lab 3: MQTT MITM and Packet Modification](lab-03-mqtt-mitm/README.md)  
    Perform a Man-in-the-Middle (MITM) attack on MQTT traffic, analyze message flows, and modify published data using ettercap and bettercap tools.
+
+4. [Lab 4: Buffer Overflow Attack](lab-04-buffer-overflow-attack/README.md)  
+   Perform a buffer overflow attack against a vulnerable C program running on ESP32. Craft and inject a payload that overwrites the return address and activates hidden admin mode.
 
 ## Requirements
 
